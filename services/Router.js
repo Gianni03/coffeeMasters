@@ -21,7 +21,7 @@ const Router = {
     console.log(`going to: ${route}`);
 
     if (addToHistory) {
-      history.pushState({ route }, null, route);
+      history.pushState({ route }, '', route);
     }
     let pageElement = null;
     switch (route) {
@@ -35,7 +35,7 @@ const Router = {
         if (route.startsWith("/product-")){
           pageElement = document.createElement('details-page');
           const paramId = route.substring(route.lastIndexOf("-")+1);
-          pageElement.dataset.id = paramId;
+          pageElement.dataset.productId = paramId;
         }
     }
 
@@ -47,6 +47,8 @@ const Router = {
       document.querySelector('main').appendChild(pageElement);
       window.scrollX = 0;
       window.scrollY = 0;
+    } else {
+      document.querySelector('main').innerHTML = '404';
     }
   },
 };

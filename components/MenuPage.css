@@ -1,7 +1,6 @@
-ul {
-    list-style: none;
-    padding: 0;
-}
+/* ul {
+   
+} */
 
 h3 {
     color: var(--color4);
@@ -26,6 +25,8 @@ article section div {
 }
 
 ul {
+    list-style: none;
+    /* padding: 0; */
     background-color: var(--color6);
     margin: 4px 6px;
     padding: 0px 12px;
